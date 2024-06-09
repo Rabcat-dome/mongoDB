@@ -1,5 +1,5 @@
 services:
-  mongo:
+  mongodb:
     image: mongo:7.0.11-jammy
     container_name: mongo
     restart: always
