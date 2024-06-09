@@ -16,6 +16,12 @@ services:
       placement:
         constraints:
           - node.role == worker
+    networks:
+      - mongo-network
+
+networks:
+  mongo-network:
+    driver: bridge
 
 volumes:
   mongo-data:

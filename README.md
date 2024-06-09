@@ -1,8 +1,8 @@
-# mongoDB
+# MongoDB
 จัดทำรูปแบบ Persistent Storage
 จัดทำ version docker และแบบ swarm
 
-# script Authen
+# Script Authen
 docker exec -it mongo mongosh
 
 use admin
