@@ -1,0 +1,23 @@
+services:
+  mongo:
+    image: mongo:7.0.11-jammy
+    container_name: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    # command: ["mongod", "--auth"]
+    volumes:
+      - mongo-data:/data/db
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+volumes:
+  mongo-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /media/psf/NFS/mongo-data
