@@ -21,7 +21,7 @@ services:
 
 networks:
   mongo-network:
-    driver: bridge
+    driver: overlay
 
 volumes:
   mongo-data:
